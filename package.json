@@ -1,0 +1,11 @@
+{
+  "name": "simple_express_server",
+  "version": "1.0.0",
+  "description": "This is a simple express server for demonstration purposes",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "author": "Shahbaz",
+  "license": "ISC"
+}
