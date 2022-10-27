@@ -3,7 +3,7 @@ const app = express()
 
 app.get("/", function(req, res){
     var name = ""
-    res.send(`Your name is ${name}`)
+    res.send(`Server is up`)
 })
 
 app.get("/toUppercase", function(req, res){
@@ -23,6 +23,11 @@ app.get("/calculate/:operation", (req, res) => {
         const num1 = Number(req.query.num1)
         const num2 = Number(req.query.num2)
         const result = num1 + num2
+        res.send(result + "")
+    } else if (opr == "sub"){
+        const num1 = Number(req.query.num1)
+        const num2 = Number(req.query.num2)
+        const result = num1 - num2
         res.send(result + "")
     } else {
         res.send("Operation not found");
