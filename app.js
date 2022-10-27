@@ -10,8 +10,17 @@ app.get("/toUppercase", function(req, res){
     console.log(req.query);
     var name = req.query.name;
     var movie = req.query.fav_movie;
-    name = name.toUpperCase()
-    res.send(`my name is ${name}, my favorite movie is ${movie}`);
+
+    var result = ""
+
+    try {
+        name = name.toUpperCase()
+        result = `my name is ${name}, my favorite movie is ${movie}`
+    } catch (error) {
+        result = "name required";
+    }
+    
+    res.send(result);
 })
 
 
